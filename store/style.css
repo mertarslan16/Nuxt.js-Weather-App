@@ -1,0 +1,324 @@
+
+#main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.day {
+  background: linear-gradient(to bottom left, #d7d3ac, #ffffff);
+}
+.night {
+  background: linear-gradient(to bottom left, #4854a2, #3d3d3d);
+  color: white;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 500;
+  font-family:  Arial, Helvetica, sans-serif;
+  margin:0 0 25px 0;
+}
+
+.form-rounded {
+  border-radius: 2rem;
+}
+
+.back-card  {
+  border-radius: 40px !important;
+  color: white;
+  background: linear-gradient(to bottom right, #707070, #474949a4);
+  text-shadow: 2px 2px 2px #707070;
+  opacity: 0.5px;
+}
+
+.today{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.card-bottom{
+  font-size: 20px;
+}
+
+.city-name {
+  position: absolute;
+  width: 100%;
+}
+
+.city-name p {
+  font-weight: 400;
+  font-size: 16pt;
+}
+
+.city-name span {
+  position: relative;
+  top: -50px;
+  font-size: 40pt;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.temp span { 
+  font-weight: 100;
+  font-size: 5em;
+  letter-spacing: -5px;
+  white-space: nowrap;
+}
+.card-mid {
+  line-height: 0.5;
+}
+.condition {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1em;
+  text-transform: capitalize;
+}
+
+.high {
+  font-size: 15px;
+}
+
+.low {
+  font-size: 15px;
+}
+
+.card-bottom p {
+  font-size: 50px;
+  font-weight: 100;
+  letter-spacing: -3px;
+}
+.card-bottom {
+  line-height: 0.5;
+}
+
+.card-bottom span {
+  font-size: 12px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
+
+.weather-name{
+  font-size: 25px;
+
+}
+
+.days5{
+  padding:20px 0 20px 0;
+  text-align: center;
+  font-size: large;
+             
+}
+
+.info{
+  font-size: large;
+  display: flex;
+  justify-content: space-around;
+  padding:5px 5px 0 10px;
+}
+
+
+  .daily{
+    display:flex;
+    text-align: center;
+    padding:0 0 10px  10px;
+ 
+  }
+  .day1{
+    background-color: #3d3d3d3f;
+    border-radius: 20px;
+    margin-right:10px;
+    transition: 0.5s;
+  }
+  .day1:hover{
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  .day2{
+    background-color: #3d3d3d2a;
+    border-radius: 20px; 
+    margin-right:10px;
+    transition: 0.5s;
+  }
+  .day2:hover{
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  .day3{
+    background-color: #3d3d3d33;
+    border-radius: 20px;
+    margin-right:10px;
+    transition: 0.5s;
+  }
+  .day3:hover{
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  .day4{
+    background-color: #3d3d3d18;
+    border-radius: 20px;
+    margin-right:10px;
+    transition: 0.5s;
+  }
+  .day4:hover{
+    transform: scale(1.2);
+    z-index: 1;
+  }
+  .day5{
+    background-color: #3d3d3d15;
+    border-radius: 20px;
+    margin-right:10px;
+    transition: 0.5s;
+  }
+  .day5:hover{
+    transform: scale(1.2);
+    z-index: 1;
+  }
+
+
+
+ /* animations */
+ 
+.img_main{
+  animation: go-left-right 3s infinite alternate;
+  position: relative;
+  }
+  @keyframes go-left-right {        
+    from { left: 0px; }             
+    to { left: calc(10% - 25px); } 
+  }
+
+
+.rain{
+  content: "";
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+
+.rain span {
+  position: relative;
+  bottom: 5px;
+  width: 1px;
+  height: 5px;
+  background: white;
+  margin:0 2px;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  animation-duration: calc(15s / var(--i));
+  transform-origin: bottom;
+}
+@keyframes animate {
+0%{
+  transform: translateY(0) scale(1);
+}
+70%{
+  transform: translateY(300px) scale(1);
+}
+100%{
+  transform: translateY(300px) scale(0);
+}
+}
+
+.snow{
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+
+.snow span {
+  position: relative;
+  bottom: 10px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  margin:0 2px;
+  border-radius: 50%;
+  animation: animate-snow 5s linear infinite;
+  animation-duration: calc(15s / var(--a));
+  transform-origin: bottom;
+}
+@keyframes animate-snow {
+0%{
+  transform: translateY(0) scale(1);
+}
+70%{
+  transform: translateY(300px) scale(1);
+}
+100%{
+  transform: translateY(300px) scale(0);
+}
+}
+
+.cloud{
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.cloud span{
+  margin: 0 2px;
+  background: #ffffff;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  padding-right: 10px ;
+  box-shadow: rgb(255, 255, 255) 24px -6px 0 2px, rgb(251, 251, 251) 10px 5px 0 5px, rgb(251, 251, 251) 30px 5px 0 2px,  rgb(251, 251, 251)  11px -8px 0 -3px ;
+  animation: animate-clouds 3s infinite ;
+  animation-duration: calc(121s / var(--b));
+  transform:top;
+}
+@keyframes animate-clouds {        
+  0%{
+    transform: translateY(0) scale(1);
+  }
+  70%{
+    transform: translateY(300px) scale(1);
+  }
+  100%{
+    transform: translateY(300px) scale(0);
+  }
+}
+
+.sun{
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px 0 0;
+}
+
+.sun span{
+  background: #ffa908;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  padding-top: 10px ;
+}
+
+.sun li{
+  list-style: none;
+  position: absolute;
+  transform: translate(-50,-50);
+  width: 55px;
+  height: 3px;
+  background: #ffa908;
+  box-shadow: 0 0 15px #ffa908;
+}
+
+.sun li:nth-child(1){
+  transform: translate(20%,-50%) rotate(0deg);
+}
+.sun li:nth-child(2){
+  transform: translate(-35%, 760%) rotate(90deg);
+}
+.sun li:nth-child(3){
+  transform: translate(20%,400%) rotate(30deg);
+}
+.sun li:nth-child(4){
+  transform: translate(-5%,850%) rotate(60deg);
+}
